@@ -60,4 +60,9 @@ export default {
         let json = await request('post', '/auth/validate', {}, token);
         return json();
     },
+    //função para realizar o login na aplicação
+    login: async () =>{
+        let json = await request('post', '/auth/login',{cpf, password});
+        return json;
+    }
 };
